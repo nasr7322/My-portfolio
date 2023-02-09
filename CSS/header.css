@@ -1,0 +1,77 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    column-gap: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.header p{
+    font-size: 20px;
+    margin: 0;
+    width: 100px;
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.header-logo{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    cursor: pointer;
+}
+
+.hlogo-na,.hlogo-sr{
+    height: 20px;
+    object-fit: contain;
+    pointer-events:none;
+    opacity: 0;
+    transition: all 0.4s;
+}
+.hlogo-na{
+    margin-right: 10px;
+    margin-top: 25px;
+}
+.hlogo-sr{
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+.header-logo:hover .hlogo-sr,.header-logo:hover .hlogo-na {
+    opacity: 1;
+}
+
+.header-text1,.header-text2,.header-text3,.header-text4,.header-logo{
+    transition: all 0.6s;
+}
+.header-text1:hover,.header-text2:hover,.header-text3:hover
+,.header-text4:hover,.header-logo:hover{
+    margin: 0 30px;
+    font-weight: 500;
+}
+.header-text1:active,.header-text2:active,.header-text3:active
+,.header-text4:active,.header-logo:active{
+    opacity: 0.8;
+}
+
+@media (max-width:1024px) {
+    .header{
+        column-gap: 0;}
+}
+@media (max-width:800px) {
+    .header-text1,.header-text2,.header-text3,.header-text4{
+       display: none;
+    }
+}
+@media (min-width:1440px) {
+    .header{
+        column-gap: 130px;}
+}
